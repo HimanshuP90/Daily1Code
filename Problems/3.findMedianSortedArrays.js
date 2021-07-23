@@ -13,16 +13,16 @@
  * @return {number}
  */
 
-const findMedianSortedArrays = function(nums1, nums2) {
-    let arr = [...nums1, ...nums2].sort((a,b) => a - b);
-    
-    if(arr.length % 2 > 0 ? false : true) {
-        let r = (arr.length) / 2;
-        let l = r - 1;
-        return (arr[l] + arr[r]) / 2;
-    } else {
-        return arr[((arr.length + 1) / 2) - 1];
-    }
+const findMedianSortedArrays = (nums1, nums2) => {
+  let arr = [...nums1, ...nums2].sort((a, b) => a - b);
+
+  if (arr.length % 2 > 0 ? false : true) {
+    let r = arr.length / 2;
+    let l = r - 1;
+    return (arr[l] + arr[r]) / 2;
+  } else {
+    return arr[(arr.length + 1) / 2 - 1];
+  }
 };
 
-console.log(findMedianSortedArrays([1,3], [2]))
+console.log(findMedianSortedArrays([1, 3], [2]));
