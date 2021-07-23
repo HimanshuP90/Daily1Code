@@ -13,7 +13,7 @@
  * @return {number}
  */
 
-const findMedianSortedArrays = (nums1, nums2) => {
+const findMedianSortedArrays = ( nums1, nums2 ) => {
   let arr = [...nums1, ...nums2].sort((a, b) => a - b);
 
   if (arr.length % 2 > 0 ? false : true) {
