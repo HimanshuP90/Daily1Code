@@ -22,7 +22,6 @@ const groupAnagrams = function(strs) {
         }
         obj[sortedStr].push(str);
     }
-    
     return Object.values(obj);
 };
 
